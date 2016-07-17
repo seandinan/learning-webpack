@@ -1,0 +1,31 @@
+@mixin margins {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 15px;
+}
+@mixin basicborder {
+	border: 0px;
+	box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
+	padding: 16px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	background-color: rgb(127, 152, 155);
+}
+
+.entry-block {
+	@include margins;
+	@include basicborder;
+	display: inline-block;
+	float: left;
+	background-color: white;
+	align-self: flex-start;
+}
+
+input {
+	@include basicborder;
+	font-size: 24px;
+}
